@@ -8,16 +8,16 @@ Deploy on Heroku
     
         install  Heroku Toolbelt from here https://toolbelt.heroku.com/
     
-    1- Register on https://heroku.com/ and create a project with name <> on heroku site.
+        Register on https://heroku.com/ and create a project with name <> on heroku site.
     
-    2- Open "Git Bash" - Right click in any directory and open "Git Bash" prompt.
+        Open "Git Bash" - Right click in any directory and open "Git Bash" prompt.
     
-    3- Create the postgress database in heroku and provide the DB details in src/main/resources/application.properties
+        Create the postgress database in heroku and provide the DB details in src/main/resources/application.properties
     
-    3- Build the project using mvn install, and move to target folder and open the "Git Bash" prompt 
+        Build the project using mvn install, and move to target folder and open the "Git Bash" prompt 
     
-    4- Run "heroku deploy:war --war <war file name> --app <application name created on heroku>"
+        Run "heroku deploy:war --war <war file name> --app <application name created on heroku>"
     
-    5- Check the Log heroku "logs --tail --app <application name>"
+        Check the Log heroku "logs --tail --app <application name>"
     
-    6- Open WSDL https://<application name>.herokuapp.com/ws/employees.wsdl
+        Open WSDL https://<application name>.herokuapp.com/ws/employees.wsdl
