@@ -1,0 +1,111 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://sandy.com/services/soap" targetNamespace="http://sandy.com/services/soap"
+	elementFormDefault="qualified">
+
+	<xs:element name="getEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="empId" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Save Employee Request -->
+	
+	<xs:element name="saveEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="saveEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Update Employee Request -->
+	
+	<xs:element name="updateEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="updateEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- List All Employee Request -->
+	
+	<xs:element name="listAllEmployeeRequest">
+	<xs:complexType>
+			<xs:sequence>				
+			</xs:sequence>
+		</xs:complexType>		
+	</xs:element>
+
+	<xs:element name="listAllEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element name="allemployees" type="tns:employee" nillable="true" minOccurs="0" maxOccurs="unbounded"/>				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- delete Employee Request -->
+	
+	<xs:element name="deleteEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="empId" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="deleteEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="employee">
+		<xs:sequence>
+			<xs:element name="empId" type="xs:int" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="designation" type="tns:designation" />
+			<xs:element name="department" type="xs:string" />
+			<xs:element name="country" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="designation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SE" />
+			<xs:enumeration value="SSE" />
+			<xs:enumeration value="TL" />
+			<xs:enumeration value="ARCHITECT" />
+			<xs:enumeration value="PM" />
+			<xs:enumeration value="TESTER" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
