@@ -5,7 +5,8 @@
     pom will generate a new objects. I am using Employee object as an entity. while generating stub system will remove all the JPA anotations from Employee.java entity.
     
 Deploy on Heroku
-    install  Heroku Toolbelt from here https://toolbelt.heroku.com/
+    
+        install  Heroku Toolbelt from here https://toolbelt.heroku.com/
     
     1- Register on https://heroku.com/ and create a project with name <> on heroku site.
     
